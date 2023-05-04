@@ -785,10 +785,38 @@ progress {
   padding-top: 15px;
   margin-bottom: 30px;
 }
+
+.row3 {
+  width: 100%;
+  padding: 0px;
+}
+
+.row3 {
+  width: 100%;
+  padding: 0px;
+}
+
+.row4 {
+  display: table;
+  width: 90%;
+  margin: 50px;
+}
+
 .column2 {
   float: left;
   width: 47%;
 }
+
+.column3 {
+  float: left;
+  width: 45%;
+}
+
+.column4 {
+  display: table-cell;
+  width: 30%;
+}
+
 .topic_text{
    color: white;
 }
