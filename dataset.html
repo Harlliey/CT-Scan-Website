@@ -1,13 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CT Scan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar bg-body-tertiary navbar-expand-xxl fixed-top">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CT Scan</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar bg-body-tertiary navbar-expand-xxl fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="icons/medical-team.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -19,24 +29,138 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Introduction</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="dataset.html">Dataset</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="methodology.html">Methodology</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="result.html">Result</a>
-              </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Introduction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="dataset.html">Dataset and Problem</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="methodology.html">Methodology and Experiment</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="result.html">Conclusion and Future Work</a>
+                </li>
             </ul>
           </div>
         </div>
     </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('assets/img/clinicaltrial.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1 class = "topic_text"> Datasets and Problem </h1>
+                            <span class="subheading"></span>
+                        </div>
+                    </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container">
+                <div class="text-center mt-5">
+                    <p class="lead">Two major datasets are used, mainly differing by the structure of the queries.</p>
+                    <!-- <p>Bootstrap v5.2.3</p>-->
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                <div class="column">
+                            <div class="text-center mt-5">
+                                <h2>SIGIR 2016 dataset</h2>
+                            </div>
+                            <blockquote class="lead mb-0">Analyzed by <a href="https://dl.acm.org/doi/10.1145/2911451.2914672">Koopman and Zucoon (SIGIR 16)</a>,
+                                this dataset was crawled from <a href = "ClinicalTrials.gov"> ClinicalTrials.gov </a> , and originally in XML format. </blockquote>
+                            <h1></h1>
+                            <h4>Documents: </h4>
+                            <ul>
+                              <li class="lead mb-0">Available Trials: 204,855</li>
+                              <li class="lead mb-0">Annotated (patient, trial) pairs: ~ (60, 3600)</li>
+                            </ul>
+                            <h4>Queries: </h4>
+                            <ul>
+                              <li class="lead mb-0">60 topics (patient case reports)</li>
+                              <li class="lead mb-0">A description (on average 78 words), A summary (on average 22 words)</li>
+                              <li class="lead mb-0">Adhoc queries (on average 8.2 keyword queries per topic)</li>
+                            </ul>
+                            <h4> Relevance judgements: </h4>
+                            <ul>
+                              <li class="lead mb-0">0 - Would not refer this patient for this clinical trial</li>
+                              <li class="lead mb-0">1 - Would consider referring this trial upon further investigation</li>
+                              <li class="lead mb-0">2 - Highly likely to refer this patient for this clinical trial</li>
+                            </ul>
+                            <h4> Example Topic: </h4>
+                            <p> 64-year-old obese female with diagnosis of diabetes mellitus and persistently elevated HbA1c. She is reluctant to see a nutritionist and is not compliant with her diabetes medication or exercise. She complains of a painful skin lesion on the left lower leg. She has tried using topical lotions and creams but the lesion has increased in size and is now oozing.
+                            </p>
+                </div>
+                    <div class="column">
+                            <div class="text-center mt-5">
+                                <h2 class="section-heading">TREC Clinical Trials 2021 dataset</h2>
+                            </div>
+                            <blockquote class="lead mb-0"> This dataset comes from the clinial trial of Text REtrieval Conference (TREC) whose biomedical tricks are listed <a href="http://www.trec-cds.org/"> here. </a>
+                                The <a href = "http://www.trec-cds.org/2021.html"> 2021 dataset </a> is used for the purpose of this project. </blockquote>
+                            <h1></h1>
+                            <h4>Documents: </h4>
+                            <ul>
+                              <li class="lead mb-0">Available Trials: 375,581 </li>
+                              <li class="lead mb-0">Annotated (patient, trial) pairs: ~ (75, 19,000)</li>
+                            </ul>
+                            <h4>Queries: </h4>
+                            <ul>
+                              <li class="lead mb-0">75 topics (patient description)</li>
+                              <li class="lead mb-0">Topics are lengthy (5 to 10 sentences)</li>
+                             </ul>
+                            <h4> Relevance judgements: </h4>
+                            <ul>
+                              <li class="lead mb-0">0 - Not Relevant: The clinical trial is not in any way relevant to the patient</li>
+                              <li class="lead mb-0">1 – Excluded: The patient has the condition but does not meet the eligibility criteria</li>
+                              <li class="lead mb-0">2 - Eligible. The clinical trial is relevant and the eligibility criteria are met</li>
+                            </ul>
+                            <h4> Example Topic: </h4>
+                            <p> A 2-year-old boy is brought to the emergency department by his parents for 5 days of high fever and irritability. The physical exam reveals conjunctivitis, strawberry tongue, inflammation of the hands and feet, desquamation of the skin of the fingers and toes, and cervical lymphadenopathy with the smallest node at 1.5 cm. The abdominal exam demonstrates tenderness and enlarged liver. Laboratory tests report elevated alanine aminotransferase, white blood cell count of 17,580/mm, albumin 2.1 g/dL, C- reactive protein 4.5 mg, erythrocyte sedimentation rate 60 mm/h, mild normochromic, normocytic anemia, and leukocytes in urine of 20/mL with no bacteria identified. The echocardiogram shows moderate dilation of the coronary arteries with possible coronary artery aneurysm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="text-center mt-5">
+                    <h1>Clinical Trial Structure </h1>
+                    <p class="lead"> Each clinical trials has a variety of attributes (not all present for all trials). </p>
+                </div>
+                <div class = "row2">
+                    <div class = "column2">
+                        <ul>
+                           <li>brief_title</li>
+                           <li>official_title</li>
+                           <li>brief_summary</li>
+                           <li>detailed_description</li>
+                           <li>criteria</li>
+                       </ul>
+                    </div>
+                    <div class = "column2">
+                        <ul>
+                            <li>condition</li>
+                            <li>gender</li>
+                            <li>minimum_age</li>
+                            <li>maximum_age</li>
+                            <li>healthy_volunteers</li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="text-center mt-5">
+                    <h1>Problem Statement</h1>
+                </div>
+                    <p class="lead"> Given a patient <b> p </b> and a collection of clinical trials <b> C </b> , the goal
+                        is to return an ordered list of <b>(p,c)</b> pairs where <b> c &#8712 C </b>, such that <b>c</b>
+                         is a relevant clinical trial for that patient, and the higher the clinical trial is on the list, the more relevant it is for that patient.
+                    </p>
+                <img src="assets/img/problem.jpg" alt="Flowers in Chania">
+            </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  </body>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

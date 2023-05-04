@@ -254,6 +254,7 @@ a:hover {
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
+
   text-decoration: none;
 }
 
@@ -489,6 +490,12 @@ progress {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+
+.lead2 {
+  font-size: 1rem;
+  font-weight: 250;
 }
 
 .display-1 {
@@ -758,6 +765,39 @@ progress {
   width: 50%;
 }
 
+.column {
+  float: left;
+  width: 47%;
+  background: #F0F8FF;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 15px;
+  padding-top: 15px;
+}
+
+.row2 {
+  float: left;
+  width: 100%;
+  background: #F0F8FF;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 15px;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+.column2 {
+  float: left;
+  width: 47%;
+}
+.topic_text{
+   color: white;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .col-7 {
   flex: 0 0 auto;
   width: 58.33333333%;
@@ -3790,6 +3830,10 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  background: white;
+  opacity: 0.4;
+  border-radius: 25px;
+  padding: 15px;
 }
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
@@ -4329,7 +4373,10 @@ textarea.form-control-lg {
     border-bottom-left-radius: 0;
   }
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 .accordion {
   --bs-accordion-color: #212529;
   --bs-accordion-bg: #fff;
@@ -10837,7 +10884,16 @@ textarea.form-control-lg {
 .features-icons .features-icons-item .features-icons-icon i {
   font-size: 4.5rem;
 }
-
+header.masthead2 {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+}
 header.masthead {
   position: relative;
   background-color: #343a40;
@@ -10916,4 +10972,79 @@ header.masthead h1, header.masthead .h1 {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-5 {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-5::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  margin-left: -7px;
+}
+
+/* Container around content */
+.timeline-5 {
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+/* The circles on the timeline */
+.timeline-5::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 1px;
+  background-color: black;
+  top: 18px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the right */
+.right-5 {
+  padding: 0px 0px 20px 40px;
+  left: auto;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-5::before {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  z-index: 1;
+  left: 20px;
+  border: medium solid black;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent black transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-5::after {
+  left: -10px;
+}
+
+@media (max-width: 991px) {
+  .main-timeline-5 {
+    max-width: 100%;
+  }
+}
+.gradient-custom-5 {
+  /* fallback for old browsers */
+
+
+  /* Chrome 10-25, Safari 5.1-6 *//* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: radial-gradient(827px at 47.3% 48%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 90%);
 }
