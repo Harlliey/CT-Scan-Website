@@ -62,16 +62,16 @@
                 </div>
             <hr>
             <div class = "row3">
-                      <div class = "column3">
+                      <div class = "column5">
                         <h1></h1>
                         <h1></h1>
-                        <h5> Different Sections of CTRs (SIGIR dataset)</h5>
+                        <h5 class="text-center mt-5"> Different Sections of CTRs (SIGIR dataset)</h5>
                         <img src="assets/img/bar1.jpg" alt="Flowers in Chania">
                         </div>
-                        <div class = "column3">
+                        <div class = "column5">
                             <h1></h1>
                             <h1></h1>
-                            <h5> Different Types of Topics (SIGIR dataset)</h5>
+                            <h5 class="text-center mt-5"> Different Types of Topics (SIGIR dataset)</h5>
                             <img src="assets/img/bar2.jpg" alt="Flowers in Chania">
                         </div>
                     </div>
@@ -81,25 +81,130 @@
 
           <div class = "row4">
                 <div class = "column4">
-                    <h5 class="text-center mt-5"> Re-rank System Performance (TREC dataset)</h5>
-                    <br>
-                    <img src="assets/img/table2.jpg" alt="Flowers in Chania">
-                    <br>
+                    <table class="table">
+                      <thead>
+                        <h5 class="text-center mt-5"> Search System Performance (TREC dataset)</h5>
+                        <br>
+                        <tr>
+                          <th>System</th>
+                          <th>MRR</th>
+                          <th>NDCG</th>
+                          <th>P<sub>5</sub></th>
+                          <th>MAP</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">BM25</th>
+                          <td>0.7289</td>
+                          <td>0.4909</td>
+                          <td>0.5519</td>
+                          <td>0.1720</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br>Demographic Filtering</th>
+                          <td>0.7387</td>
+                          <td>0.4953</td>
+                          <td>0.5600</td>
+                          <td>0.1752</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br>Relevance Boosting</th>
+                          <td>0.7495</td>
+                          <td>0.4953</td>
+                          <td>0.5439</td>
+                          <td>0.1776</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br>Demographic Filtering + <br> Relevance Boosting
+                          <td>0.7378</td>
+                          <td>0.5004</td>
+                          <td>0.5466</td>
+                          <td>0.1836</td>
+                      </tbody>
+                    </table>
                 </div>
 
                 <div class = "column4">
-                    <h5 class="text-center mt-5"> Re-rank System Performance (TREC dataset continued) </h5>
-                    <br>
-                    <img src="assets/img/table3.jpg" alt="Flowers in Chania">
-                    <br>
+                    <table class="table">
+                      <thead>
+                        <h5 class="text-center mt-5">Re-rank System Performance (TREC dataset) </h5>
+                        <br>
+                        <tr>
+                          <th>System</th>
+                          <th>MRR</th>
+                          <th>NDCG</th>
+                          <th>P<sub>5</sub></th>
+                          <th>MAP</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">BM25 (Top 100)</th>
+                          <td>0.7289</td>
+                          <td>0.2319</td>
+                          <td>0.5520</td>
+                          <td>0.1162</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+ <br> MonoBERT(Bert)</th>
+                          <td>0.7085</td>
+                          <td>0.2351</td>
+                          <td>0.5307</td>
+                          <td>0.1208</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br> MonoBERT(SciBert)</th>
+                          <td><b>0.7554</b></td>
+                          <td><b>0.2521</b></td>
+                          <td><b>0.5687</b></td>
+                          <td><b>0.1310</b></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br>MonoBERT(BlueBert)</th>
+                          <td>0.7391</td>
+                          <td>0.2382</td>
+                          <td>0.5413</td>
+                          <td>0.1220</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <hr>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <th scope="row">BM25 (Top 100)</th>
+                          <td>0.7289</td>
+                          <td>0.2319</td>
+                          <td>0.5520</td>
+                          <td>0.1162</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br>MonoBERT(SciBert)</th>
+                          <td>0.7554</td>
+                          <td>0.2521</td>
+                          <td>0.5687</td>
+                          <td>0.1310</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br>Sentence BERT</th>
+                          <td>0.7078</td>
+                          <td>0.2165</td>
+                          <td>0.5340</td>
+                          <td>0.1011</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">BM25+<br>SciBert(Mono)+<br>Sentence BERT(Duo)</th>
+                          <td><b>0.7781</b></td>
+                          <td><b>0.2672</b></td>
+                          <td><b>0.5453</b></td>
+                          <td><b>0.1450</b></td>
+                        </tr>
+                      </tbody>
+                    </table>
                 </div>
 
-                <div class = "column4">
-                    <h5 class="text-center mt-5"> Search System Performance (TREC dataset)</h5>
-                    <br>
-                    <img src="assets/img/table1.jpg" alt="Flowers in Chania">
-                    <br>
-                </div>
           </div>
         </div>
         <div id = "exp" class="container">

@@ -814,7 +814,14 @@ progress {
 
 .column4 {
   display: table-cell;
-  width: 30%;
+  width: 50%;
+  padding: 20px;
+}
+
+.column5 {
+  display: table-cell;
+  width: 50%;
+  padding: 5px;
 }
 
 .topic_text{
